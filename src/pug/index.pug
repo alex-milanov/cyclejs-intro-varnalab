@@ -1,0 +1,59 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset='UTF-8')
+		title CoffeeScript tpl test
+		link(rel='stylesheet', href='css/style.css')
+	body(onLoad="initApp()")
+		section.reveal
+			section.slides
+				header
+					.title Intro to Cycle.js
+					.right VarnaLab 15.08.2016
+				section
+					h1 Into to Cycle.js
+					p VarnaLab 15.08.2016
+				section
+					h2 Agenda
+					section
+						ul
+							li Background and Building Blocks
+							li Thinking in Cycle.js
+							li Some Livecoding
+							li Addtitional examples and approaches
+				section
+					h2 Background
+					section
+						ul
+							li Functional Programming
+							li Functional Reactive Programming (Streams)
+							li Virtual Dom (Hyperscript)
+					section
+						h3 Functional Programming
+						pre: code.javascript.
+							const users = [
+								{ id: 1, name: "Pesho", email: "pesho@mail.bg" },
+								{ id: 2, name: "Gosho", email: "gosho@abv.bg" },
+								{ id: 3, name: "Tosho", email: "tosho@gmail.com" },
+							];
+
+							users.reduce((hash, user) =>
+								(hash[user.id] = user.name) && hash
+							, {});
+							// {1: Pesho, 2: Gosho, 3: Tosho}
+
+				section
+					h2 Thinking in Cycle.js
+					section
+						ul
+							li The main function
+							li Model-View-Intent
+							li Drivers
+							li Components
+				section
+					h2 Some Livecoding
+				section
+					h2 Addtitional Examples
+		//- load the app
+		script(src="lib/reveal.js/lib/js/head.min.js")
+		script(src="js/app.js")
