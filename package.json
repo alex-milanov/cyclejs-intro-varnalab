@@ -37,6 +37,6 @@
     "highlight.js": "^9.6.0",
     "marked": "^0.3.6",
     "pug": "^2.0.0-beta5",
-    "reveal.js": "^3.3.0"
+    "reveal.js": "^4.3.0"
   }
 }
